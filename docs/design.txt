@@ -1,0 +1,114 @@
+Problem Statement:
+  Create a bingo program that generates the player's card, calls out numbers, and displays all numbers that have been called.
+  This program should allow the player to "daub" their card and call out when they have bingo and check if that bingo is valid and let's the player know.
+
+Nouns: player's card, numbers
+
+Verbs: generate, calls out, display, mark, call bingo, check bingo
+
+
+Defining Diagram:
+
+  Inputs:
+    daub
+
+  Processing:
+    generate card 
+    call out numbers
+    check for valid bingo
+  
+  Outputs
+    called numbers
+    bingo validation
+
+
+Solution Algorithm:
+
+  playBingo
+    initialize bingo to false
+    initialize playerNumbers with
+      LOOP for 24 numbers
+        LOOP for 5 numbers between 1 and 15
+          ENDLOOP
+        LOOP for 5 numbers between 16 and 30
+          ENDLOOP
+        LOOP for 4 numbers between 31 and 45
+          ENDLOOP
+        LOOP for 5 numbers between 46 and 60
+          ENDLOOP
+        LOOP for 5 numbers between 61 and 75
+          ENDLOOP
+        ENDLOOP
+      DISPLAY playerNumbers
+
+    initialize calledNumbers with
+      LOOP for 75 numbers while bingo is false
+        generate random number
+        IF random number in calledNumbers repeate
+        ELSE push to calledNumbers and display
+      ENDLOOP
+
+    initialize checkBingo function
+      LOOP through 12 bingo patterns and check player card
+        IF checkBingo does not find winning pattern
+          display that is not a valid bingo
+          continue calledNumbers
+        ELSE
+          display that is a valid bingo
+          set bingo to true
+
+
+Testing:
+
+Test Case 1:
+
+  INPUT VALUES: User clicks button to call out bingo when bingo is valid.
+
+  EXPECTED RESULTS: Congratulation message is displayed and numbers stop being called.
+
+  ACTUAL RESULTS: That is not a valid bingo was displayed even when all 75 numbers had been called.
+
+  PROBLEM: Player numbers were being pushed to array as string value and bingo check was looking for numbers.
+
+  SOLUTION: Player numbers were converted to numbers during bingo check.
+
+Test Case 2:
+
+  INPUT VALUES: Game was started and player card numbers were generated.
+
+  EXPECTED RESULTS: Numbers on player card were all unique.
+
+  ACTUAL RESULTS: Numbers on player card would be duplicates at times.
+
+  PROBLEM: Player numbers were being generated randomly but sometimes function would generate the same number.
+
+  SOLUTION: A number check was implemented to ensure repeat numbers were not added to player card.
+
+Test Case 3:
+
+  INPUT VALUES: Button to generate new player card was clicked.
+
+  EXPECTED RESULTS: New player card generated, called numbers cleared, and new game started.
+
+  ACTUAL RESULTS: New player card was generated, but called numbers weren't cleared. The more the button was clicked, the faster the numbers were called.
+
+  PROBLEM: Program was not restarting the number calling function, instead it was initializing multiple instances.
+
+  SOLUTION: Implemented page reload on click to restart all js functions.
+
+Test Case 4:
+
+  INPUT VALUES: Clicked bingo call button while bingo was invalid until bingo was valid.
+
+  EXPECTED: Program would return "That is not a valid bingo!" until bingo was valid then return "Congratulations! You Won!"
+
+  ACTUAL RESULTS: Program returned "That is not a valid bingo!" until bingo was valid, then returned "Congratulations! You Won!" and stopped calling numbers.
+
+
+
+TAKEAWAYS:
+
+This project was more challenging than I expected. There were several unexpected issues and as a result my code was constantly evolving.
+In the end, my actual code didn't look very much like my solution algorithm.
+Reviewing my code now, I can see where I could rewrite for better efficiency and reduce the number of lines.
+Overall I am happy with the functionality with my code, but will continue to improve it as a side project.

@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Bingo</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Jerry's Midnight Bingo</h1>
+      </div>
+      <div id="content">
+        <table id="calledNumbers">
+          <tr>
+            <td id="num1">1</td>
+            <td id="num2">2</td>
+            <td id="num3">3</td>
+            <td id="num4">4</td>
+            <td id="num5">5</td>
+            <td id="num6">6</td>
+            <td id="num7">7</td>
+            <td id="num8">8</td>
+            <td id="num9">9</td>
+            <td id="num10">10</td>
+            <td id="num11">11</td>
+            <td id="num12">12</td>
+            <td id="num13">13</td>
+            <td id="num14">14</td>
+            <td id="num15">15</td>
+            <td id="num16">16</td>
+            <td id="num17">17</td>
+            <td id="num18">18</td>
+            <td id="num19">19</td>
+            <td id="num20">20</td>
+            <td id="num21">21</td>
+            <td id="num22">22</td>
+            <td id="num23">23</td>
+            <td id="num24">24</td>
+            <td id="num25">25</td>
+            <td id="num26">26</td>
+            <td id="num27">27</td>
+            <td id="num28">28</td>
+            <td id="num29">29</td>
+            <td id="num30">30</td>
+            <td id="num31">31</td>
+            <td id="num32">32</td>
+            <td id="num33">33</td>
+            <td id="num34">34</td>
+            <td id="num35">35</td>
+            <td id="num36">36</td>
+            <td id="num37">37</td>
+          </tr>
+          <tr>
+            <td id="num38">38</td>
+            <td id="num39">39</td>
+            <td id="num40">40</td>
+            <td id="num41">41</td>
+            <td id="num42">42</td>
+            <td id="num43">43</td>
+            <td id="num44">44</td>
+            <td id="num45">45</td>
+            <td id="num46">46</td>
+            <td id="num47">47</td>
+            <td id="num48">48</td>
+            <td id="num49">49</td>
+            <td id="num50">50</td>
+            <td id="num51">51</td>
+            <td id="num52">52</td>
+            <td id="num53">53</td>
+            <td id="num54">54</td>
+            <td id="num55">55</td>
+            <td id="num56">56</td>
+            <td id="num57">57</td>
+            <td id="num58">58</td>
+            <td id="num59">59</td>
+            <td id="num60">60</td>
+            <td id="num61">61</td>
+            <td id="num62">62</td>
+            <td id="num63">63</td>
+            <td id="num64">64</td>
+            <td id="num65">65</td>
+            <td id="num66">66</td>
+            <td id="num67">67</td>
+            <td id="num68">68</td>
+            <td id="num69">69</td>
+            <td id="num70">70</td>
+            <td id="num71">71</td>
+            <td id="num72">72</td>
+            <td id="num73">73</td>
+            <td id="num74">74</td>
+            <td id="num75">75</td>
+          </tr>
+        </table>
+
+        <div id="curNumberContainer">
+          <p>Current Number</p>
+          <p id="currentNumber">&nbsp;</p>
+        </div>
+        <div id="playersName">&nbsp;</div>
+        <table id="bingoTable">
+          <tr>
+            <th class="topCard">B</th>
+            <th class="topCard">I</th>
+            <th class="topCard">N</th>
+            <th class="topCard">G</th>
+            <th class="topCard">O</th>
+          </tr>
+          <tr>
+            <td onclick="dauber1()" id="sq1" class="">&nbsp;</td>
+            <td onclick="dauber6()" id="sq6" class="">&nbsp;</td>
+            <td onclick="dauber11()" id="sq11" class="">&nbsp;</td>
+            <td onclick="dauber15()" id="sq15" class="">&nbsp;</td>
+            <td onclick="dauber20()" id="sq20" class="">&nbsp;</td>
+          </tr>
+          <tr>
+            <td onclick="dauber2()" id="sq2" class="">&nbsp;</td>
+            <td onclick="dauber7()" id="sq7" class="">&nbsp;</td>
+            <td onclick="dauber12()" id="sq12" class="">&nbsp;</td>
+            <td onclick="dauber16()" id="sq16" class="">&nbsp;</td>
+            <td onclick="dauber21()" id="sq21" class="">&nbsp;</td>
+          </tr>
+          <tr>
+            <td onclick="dauber3()" id="sq3" class="">&nbsp;</td>
+            <td onclick="dauber8()" id="sq8" class="">&nbsp;</td>
+            <td id="sqFree" class="daubed">FREE</td>
+            <td onclick="dauber17()" id="sq17" class="">&nbsp;</td>
+            <td onclick="dauber22()" id="sq22" class="">&nbsp;</td>
+          </tr>
+          <tr>
+            <td onclick="dauber4()" id="sq4" class="">&nbsp;</td>
+            <td onclick="dauber9()" id="sq9" class="">&nbsp;</td>
+            <td onclick="dauber13()" id="sq13" class="">&nbsp;</td>
+            <td onclick="dauber18()" id="sq18" class="">&nbsp;</td>
+            <td onclick="dauber23()" id="sq23" class="">&nbsp;</td>
+          </tr>
+          <tr>
+            <td onclick="dauber5()" id="sq5" class="">&nbsp;</td>
+            <td onclick="dauber10()" id="sq10" class="">&nbsp;</td>
+            <td onclick="dauber14()" id="sq14" class="">&nbsp;</td>
+            <td onclick="dauber19()" id="sq19" class="">&nbsp;</td>
+            <td onclick="dauber24()" id="sq24" class="">&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+      <div id="buttons">
+        <a href="#" onclick="bingo()"><button id="bingo">BINGO!</button></a>
+        <a href="#" onclick="location.reload()"
+          ><button id="newCard">New Card</button></a
+        >
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/bingo.js"></script>
+</html>
